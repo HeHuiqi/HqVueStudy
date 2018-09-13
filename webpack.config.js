@@ -14,7 +14,7 @@ var config = {
     },
     output:{
         path:path.resolve(__dirname, 'dist'),
-        publicPath:'./dist/',
+        publicPath:'/dist/',
         filename:'main.js'
     },
     //设置环境

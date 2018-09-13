@@ -8,6 +8,8 @@
     "build":"webpack --progress --hide-modules"
   },
   
+  // h5 history模式
+    "dev": "webpack-dev-server --history-api-fallback  --config   webpack.config.js",
   --open：会自动打开浏览器
   --config:指定webpack配置文件
 ```
