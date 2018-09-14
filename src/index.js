@@ -6,12 +6,18 @@ import Vue from 'vue';
 
 
 
-//添加vue-router
+
 import App from './App.vue';
+
+//添加vue-router
 import router from './router/router';
+//添加vuex进行状态管理,相当于一个单例模式
+import store from './store/store';
+
 new Vue({
     el: '#app',
     router:router,
+    store:store,
     render: h => {
         return h(App)
     }

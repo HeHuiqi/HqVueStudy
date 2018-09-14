@@ -1,6 +1,6 @@
 <template>
 
-    <div>
+    <div >
         <router-view></router-view>
     </div>
 
@@ -16,8 +16,7 @@
 
 <style scoped>
     div {
-        color: #f60;
+        color: #f640fe;
         font-size: 18px;
     }
-
 </style>
