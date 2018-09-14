@@ -2,7 +2,7 @@
     <div>
 
         <h3>首页</h3>
-        <router-link to="/about">跳转到about</router-link>
+        <router-link to="/about">跳转到介绍页</router-link>
     </div>
 </template>
 

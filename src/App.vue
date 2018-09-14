@@ -17,7 +17,7 @@
 <style scoped>
     div {
         color: #f60;
-        font-size: 24px;
+        font-size: 18px;
     }
 
 </style>

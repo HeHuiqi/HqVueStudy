@@ -15,7 +15,6 @@
       //导入组件
       import vTitle from './HqTitle.vue';
       import vButton from './HqButton.vue';
-      // import myImage from './assets/123.jpg';
       export default {
           name: "HqApp",
           data:function() {
@@ -37,5 +36,9 @@
 </script>
 
 <style scoped>
+    div {
+        color: #f60;
+        font-size: 24px;
+    }
 
 </style>

@@ -4,7 +4,7 @@ import HqIndex from '../views/HqIndex.vue';
 import HqAbout from '../views/HqAbout.vue';
 
 
-const Routers = [
+const routes = [
     {
         path:'*',
         redirect:'/index'
@@ -20,13 +20,15 @@ const Routers = [
     }
 ]
 
-const RouterConfig = {
+const routerConfig = {
     mode:'history',
-    routes:Routers,
+    routes:routes,
 }
+
+//开启使用VueRouter
 Vue.use(VueRouter);
 
-const  router = new VueRouter(RouterConfig);
+const  Router = new VueRouter(routerConfig);
 
-module.exports  = router;
+module.exports  = Router;
 
