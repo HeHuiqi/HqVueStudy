@@ -7,6 +7,7 @@ import Vue from 'vue';
 
 
 
+/*
 import App from './App.vue';
 
 //添加vue-router
@@ -22,8 +23,17 @@ new Vue({
         return h(App)
     }
 });
-
-
+*/
+//国际化
+import i18n from './local.js';
+import HqApp from './HqLocalApp.vue';
+new Vue({
+    el: '#app',
+    i18n:i18n,
+    render: h => {
+        return h(HqApp)
+    }
+});
 
 /*
 //基本
