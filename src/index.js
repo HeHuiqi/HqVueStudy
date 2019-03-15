@@ -7,9 +7,8 @@ import Vue from 'vue';
 
 
 
-/*
-import App from './App.vue';
 
+import App from './App.vue';
 //添加vue-router
 import router from './router/router';
 //添加vuex进行状态管理,相当于一个单例模式
@@ -23,9 +22,11 @@ new Vue({
         return h(App)
     }
 });
-*/
+
+
+/*
 //国际化
-import i18n from './local.js';
+import i18n from './i18n';
 import HqApp from './HqLocalApp.vue';
 new Vue({
     el: '#app',
@@ -34,7 +35,7 @@ new Vue({
         return h(HqApp)
     }
 });
-
+*/
 /*
 //基本
 import HqApp from './HqApp.vue';
