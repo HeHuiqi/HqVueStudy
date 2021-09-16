@@ -32,8 +32,9 @@ module.exports = merge(webpackBaseConfig, {
         //提取模版，并保存入口html文件
         // 不写自动生成index.html
         new HtmlwebpackPlugin({
-            // filename: 'index_prd.html',
-            // inject: true,
+            filename: 'index.html',
+            template: "./index.ejs",
+            inject: true,
         }),
     ],
 });
