@@ -1,7 +1,7 @@
 <template>
     <div>
 
-        <h3>首页</h3>
+        <h3>首页1</h3>
 
         <router-link class="link" to="/about">跳转到介绍页</router-link>
         <p>{{ $store.state.count}}</p>

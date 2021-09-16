@@ -1,33 +1,30 @@
-
 var path = require('path');
 
 // console.log(path.posix);
 
 //extract-text-webpack-plugin 插件收集css静态文件合并到一个文件中
 var ExtractTextWebpackPlugin = require('extract-text-webpack-plugin');
-
 const { VueLoaderPlugin } = require('vue-loader');
 
 var config = {
-    entry:{
-        main:'./src/index'
+    entry: {
+        main: './src/index'
     },
-    output:{
-        path:path.resolve(__dirname, 'dist'),
-        publicPath:'/dist/',
-        filename:'main.js'
+    output: {
+        path: path.resolve(__dirname, 'dist'),
+        publicPath: '/dist/',
+        filename: 'main.js'
     },
     //设置环境
-    mode:'development',
+    mode: 'development',
     //设置端口
-    devServer:{
-        port:8088,
+    devServer: {
+        port: 8088,
     },
     //设置模块规则
-    module:{
-        rules:[
-            {
-                test:/\.css$/,
+    module: {
+        rules: [{
+                test: /\.css$/,
 
                 /*
                 //这种方式会带index.html文件中自动创建<style>标签来加载css
@@ -39,19 +36,19 @@ var config = {
 
                 // //用插件合成，最后<link>导入
                 use: ExtractTextWebpackPlugin.extract({
-                    use:'css-loader',
-                    fallback:'style-loader'
+                    use: 'css-loader',
+                    fallback: 'style-loader'
                 }),
             },
             //配置vue-loader
             {
-                test:/\.vue$/,
+                test: /\.vue$/,
                 loader: 'vue-loader',
                 options: {
-                    loaders:{
-                        css:ExtractTextWebpackPlugin.extract({
-                            use:'css-loader',
-                            fallback:'vue-style-loader'
+                    loaders: {
+                        css: ExtractTextWebpackPlugin.extract({
+                            use: 'css-loader',
+                            fallback: 'vue-style-loader'
                         }),
                     }
 
@@ -59,9 +56,9 @@ var config = {
             },
             //配置es2015编译
             {
-                test:/\.js$/,
+                test: /\.js$/,
                 loader: "babel-loader",
-                exclude:/node_modules/
+                exclude: /node_modules/
             },
             /*
             当遇到♂f、 .png、.忧f等格式文件时， url-loader会把它们一起编译到 dist 目录下，
@@ -80,10 +77,10 @@ var config = {
         ]
     },
     //配置插件
-    plugins:[
+    plugins: [
         // //重命名收集到的css合成文件,然后在index.html使用<link>标签导入
         new ExtractTextWebpackPlugin({
-            filename:'main.css',
+            filename: 'main.css',
         }),
         new VueLoaderPlugin(),
     ]
@@ -91,4 +88,3 @@ var config = {
 
 };
 module.exports = config;
-
